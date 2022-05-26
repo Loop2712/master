@@ -12,7 +12,7 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('id_std') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('อีเมล หรือ รหัสนักศึกษา') }}</label>
 
                             <div class="col-md-6">
                                 <input id="id_std" type="text" class="form-control @error('id_std') is-invalid @enderror" name="id_std" value="{{ old('id_std') }}" required autocomplete="id_std" autofocus>

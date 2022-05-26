@@ -44,12 +44,12 @@ class LoginController extends Controller
         $input = $request->all();
   
         $this->validate($request, [
-            'is_std' => 'required',
+            'id_std' => 'required',
             'password' => 'required',
         ]);
   
-        $fieldType = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'is_std';
-        if(auth()->attempt(array($fieldType => $input['is_std'], 'password' => $input['password'])))
+        $fieldType = filter_var($request->id_std, FILTER_VALIDATE_EMAIL) ? 'email' : 'id_std';
+        if(auth()->attempt(array($fieldType => $input['id_std'], 'password' => $input['password'])))
         {
             return redirect()->route('home');
         }else{
@@ -57,5 +57,5 @@ class LoginController extends Controller
                 ->with('error','Email-Address And Password Are Wrong.');
         }
           
-    }   
+    } 
 }
