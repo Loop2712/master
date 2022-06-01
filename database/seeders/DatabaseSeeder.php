@@ -24,22 +24,31 @@ class DatabaseSeeder extends Seeder
         $user = [
             [
                'id_std'=>'00000000001',
-               'name'=>'jirawat',
-               'lastname'=>'prajon',
+               'name'=>'admin',
+               'lastname'=>'jirawat',
                'major' => '1',
                'email'=>'admin@mail.com',
-               'status'=>'student',
+               'status'=>'admin',
                'password'=> bcrypt('123456'),
             ],
             [
                'id_std'=>'00000000002',
-               'name'=>'jirawat ji',
+               'name'=>'jirawat',
                'lastname'=>'prajonnnnnnn',
                'major' => '1',
                'email'=>'user@mail.com',
-               'status'=>'admin',
+               'status'=>'student',
                'password'=> bcrypt('123456'),
             ],
+            [
+                'id_std'=>'00000000003',
+                'name'=>'Dr.jirawat',
+                'lastname'=>'prajonnnnnnn',
+                'major' => '1',
+                'email'=>'teacher@mail.com',
+                'status'=>'teacher',
+                'password'=> bcrypt('123456'),
+             ],
         ];
 
         foreach ($user as $key => $value) {

@@ -28,7 +28,7 @@ class HomeController extends Controller
             return redirect("/dashboard");
 
         }else if(Auth::user()->status == "teacher"){
-            return redirect("  ");
+            return redirect("/home");
         }    
 
         return view('/home');
