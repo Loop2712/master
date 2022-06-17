@@ -81,8 +81,8 @@
                             @endif --}}
                         @else
                         <li class="dropdown">
-                          <a href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            <span>{{ Auth::user()->name }}</span> <i class="bi bi-chevron-down dropdown-indicator"></i>
+                          <a class="btn-getstarted scrollto " href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <span>{{ Auth::user()->name }}&nbsp;&nbsp;&nbsp;{{ Auth::user()->lastname }}</span> <i class="bi bi-chevron-down dropdown-indicator"></i>
                           </a>
                           <ul>
                             <li><a href="#">Drop Down 2</a></li>
