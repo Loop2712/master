@@ -7,7 +7,7 @@
       <h1>HeroBiz<span>.</span></h1>
     </a>
 
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar ml-auto">
       <ul>
 
         <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -19,12 +19,12 @@
           </ul>
         </li>
 
-        <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+        {{-- <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
         <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
         <li><a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li>
-        <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
+        <li><a class="nav-link scrollto" href="index.html#team">Team</a></li> --}}
         <li><a href="blog.html">Blog</a></li>
-        <li class="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <li class="dropdown megamenu "><a href="#"><span>Mega Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
             <li>
               <a href="#">Column 1 link 1</a>
@@ -65,12 +65,45 @@
             <li><a href="#">Drop Down 4</a></li>
           </ul>
         </li>
-        <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle d-none"></i>
+        <li><a class="nav-link scrollto ml-auto" href="index.html#contact">Contact</a></li>
+     
+    
+
+    @guest
+                            @if (Route::has('login'))
+                            <li>
+                              <a class="btn-getstarted scrollto " href="{{ route('login') }}">Login</a>
+                            </li>
+                            @endif
+
+                            {{-- @if (Route::has('register'))
+                              <a class="btn-getstarted scrollto" href="{{ route('register') }}">register</a>
+                            @endif --}}
+                        @else
+                        <li class="dropdown">
+                          <a href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <span>{{ Auth::user()->name }}</span> <i class="bi bi-chevron-down dropdown-indicator"></i>
+                          </a>
+                          <ul>
+                            <li><a href="#">Drop Down 2</a></li>
+                           <li>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            
+                            </li>
+                            
+                          </ul>
+                        </li> 
+                        @endguest
+                      </ul>
+                      <i class="bi bi-list mobile-nav-toggle d-none"></i>
     </nav><!-- .navbar -->
-
-    <a class="btn-getstarted scrollto" href="index.html#about">Get Started</a>
-
   </div>
 </header><!-- End Header -->
