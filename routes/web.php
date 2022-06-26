@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\subjectController;
 use App\Http\Controllers\roomController;
+use App\Http\Controllers\bookController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -66,3 +67,4 @@ Route::middleware(['auth'])->group(function () {
     
 Route::resource('subject', subjectController::class);
 Route::resource('room', roomController::class);
+Route::resource('book', bookController::class);

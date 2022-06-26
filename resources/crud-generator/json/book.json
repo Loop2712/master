@@ -1,0 +1,45 @@
+{
+    "fields": [
+        {
+            "name": "id_room",
+            "type": "string"
+        },
+        {
+            "name": "sub_name",
+            "type": "string"
+        },
+        {
+            "name": "professor",
+            "type": "integer"
+        },
+        {
+            "name": "day",
+            "type": "date"
+            
+        },
+        {
+            "name": "time_start",
+            "type": "time"
+        },
+        {
+            "name": "time_end",
+            "type": "time"
+        },
+        {
+            "name": "esc",
+            "type": "text"
+        },
+        {
+            "name": "user_id",
+            "type": "string"
+        },
+        {
+            "name": "phone",
+            "type": "string"
+        }
+    ]
+}
+
+
+
+
