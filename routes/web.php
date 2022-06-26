@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\subjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +64,4 @@ Route::middleware(['auth'])->group(function () {
 });
     
     
+Route::resource('subject', subjectController::class);

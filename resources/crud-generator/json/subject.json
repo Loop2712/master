@@ -1,0 +1,44 @@
+{
+    "fields": [
+        {
+            "name": "id_sub",
+            "type": "string"
+        },
+        {
+            "name": "sub_name",
+            "type": "string"
+        },
+        {
+            "name": "professor",
+            "type": "integer"
+        },
+        {
+            "name": "day",
+            "type": "select",
+            "options": {
+                "sunday": "sunday",
+                "monday": "monday",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6"
+            }
+        },
+        {
+            "name": "time_start",
+            "type": "time"
+        },
+        {
+            "name": "time_end",
+            "type": "time"
+        },
+        {
+            "name": "sub_room_id",
+            "type": "integer"
+        }
+    ]
+}
+
+
+
+
