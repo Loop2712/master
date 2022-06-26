@@ -1,0 +1,24 @@
+{
+    "fields": [
+        {
+            "name": "id_room",
+            "type": "string"
+        },
+        {
+            "name": "layer",
+            "type": "string"
+        },
+        {
+            "name": "picter",
+            "type": "file"
+        },
+        {
+            "name": "type",
+            "type": "string"
+        }
+    ]
+}
+
+
+
+
